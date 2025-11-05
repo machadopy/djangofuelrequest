@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Plano</title>
 </head>
 <body>
-    <header>
-        <h1>INDEX</h1>
-    </header>
-    <section>
-        <article>
-            <h2>Planos</h2>
-    <table>
+    <h1>Plano</h1>
+        <table>
         <thead>
             <tr>
                 <th>Plano</th>
@@ -20,18 +15,13 @@
                 <th>Vendas</th>
             </tr>
             <tbody>
-                {% for plano in planos %}
                     <tr>
-                        <td><a href="{% url 'ver_plano' plano.id  %}">{{ plano.nome }}</a></td>
+                        <td>{{ plano.nome }}</a></td>
                         <td>{{ plano.preco }}</td>
                         <td>{{ plano.vendas }}</td>
                     </tr>
-                {% endfor %}
             </tbody>
         </thead>
     </table>
-        </article>
-    </section>
-    
 </body>
 </html>
