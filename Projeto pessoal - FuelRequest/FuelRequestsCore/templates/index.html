@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 <body>
     <header>
@@ -12,26 +14,37 @@
     <section>
         <article>
             <h2>Planos</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Plano</th>
-                <th>Preco</th>
-                <th>Vendas</th>
-            </tr>
-            <tbody>
-                {% for plano in planos %}
-                    <tr>
-                        <td><a href="{% url 'ver_plano' plano.id  %}">{{ plano.nome }}</a></td>
-                        <td>{{ plano.preco }}</td>
-                        <td>{{ plano.vendas }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </thead>
-    </table>
+    <div class="containertab">
+        <table>
+            <thead>
+                        <tr class="tableitem">
+                            <th>Plano</th>
+                            <th>Preco</th>
+                            <th>Vendas</th>
+                        </tr>
+                <tbody class="tableitem">
+                    {% for plano in planos %}
+                        <tr>
+                            <td><a href="{% url 'ver_plano' plano.id  %}">{{ plano.nome }}</a></td>
+                            <td>{{ plano.preco }}</td>
+                            <td>{{ plano.vendas }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </thead>
+        </table>
+    </div>    
         </article>
     </section>
-    
+    <article>
+        <div class="tableitem">
+            <img src="{% static 'images/planos.png' %}" alt="">
+        </div>
+        <div class="tableitem">
+                <button onclick="verplanos()">Ver Planos</button>
+        </div>
+    </article>
+
+<script type="text/javascript"  src="{% static 'js/script.js'%}"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from . import models as cr
 
 
@@ -11,10 +11,10 @@ def index(request):
     return render(request, 'index.html', context)
 
 def ver_plano(request, pk):
-    plans = cr.plano.objects.get(id=pk)
+    plans = get_object_or_404(cr.plano,id=pk)
+    #plans = cr.plano.objects.get(id=pk)
     context={
-        'plano': plans
-    }
+        'plano': plans}
     return render(request, 'plano.html', context)
 
 
