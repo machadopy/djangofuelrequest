@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    color: #ffffff;
+    background-color: #332825;
+    height: 100vh;
+
+}
+a{
+    text-decoration: underline;
+    color: #ffffff;
+}
+img{
+    width: 15%;
+    height: 15%;
+}
+
+table{
+    display: flex;
+    flex-direction: column;
+    
+    color: #2c3e50;
+    background-color: #FF5F26;
+    font-size: 250%;
+    
+    justify-content: center;
+    align-items: center;
+
+
+    border-radius: 4%;
+    width: fit-content;
+    height: fit-content;
+
+}
+.containertab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableitem{
+    flex-direction: column;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
